@@ -1,0 +1,40 @@
+﻿/* add padding and margin to the buttons */
+.btn {
+    padding: 12px 24px;
+    margin: 8px;
+    border: none;
+    color: #c85fa3;
+    background-color: #4CAF50;
+    font-size: 1.2em;
+    border-radius: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+    .btn:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: #c85fa3;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover:before {
+        width: 300px;
+        height: 300px;
+        opacity: 0.5;
+    }
+
+    .btn:active:before {
+        width: 500px;
+        height: 500px;
+        opacity: 1;
+        transition: all 0.1s ease-out;
+    }
